@@ -1,0 +1,199 @@
+[build-system]
+requires = ["pdm-backend>=2.4.0"]
+build-backend = "pdm.backend"
+
+[project]
+name = "enterprise-ai-testing-platform"
+version = "0.1.0"
+description = "Enterprise-grade AI testing platform for evaluating LLMs, RAG systems, AI agents, prompts, and AI applications."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { file = "LICENSE" }
+
+authors = [
+    { name = "Manoj Kumar" }
+]
+
+keywords = [
+    "ai",
+    "llm",
+    "rag",
+    "prompt-testing",
+    "ai-testing",
+    "evaluation",
+    "benchmarking",
+    "automation",
+    "playwright",
+    "testing",
+    "sdet"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Quality Assurance",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Typing :: Typed"
+]
+
+dependencies = []
+
+[dependency-groups]
+
+dev = [
+    "black>=25.0.0",
+    "build>=1.2.2",
+    "coverage[toml]>=7.8.0",
+    "mypy>=1.16.0",
+    "pre-commit>=4.2.0",
+    "pytest>=8.4.0",
+    "pytest-cov>=6.2.0",
+    "ruff>=0.12.0",
+    "twine>=6.1.0"
+]
+
+docs = []
+
+test = []
+
+ai = []
+
+playwright = []
+
+api = []
+
+[project.urls]
+Homepage = "https://github.com/MK-MAN0JKUMAR"
+Repository = "https://github.com/MK-MAN0JKUMAR/enterprise-ai-testing-platform"
+Issues = "https://github.com/MK-MAN0JKUMAR/enterprise-ai-testing-platform/issues"
+
+[tool.pdm]
+distribution = true
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+include = '\.pyi?$'
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+exclude = [
+    ".git",
+    ".venv",
+    "build",
+    "dist",
+    "__pycache__"
+]
+
+[tool.ruff.lint]
+
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+    "SIM",
+    "C4",
+    "PIE",
+    "N",
+    "W"
+]
+
+ignore = []
+
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.pytest.ini_options]
+
+testpaths = [
+    "tests"
+]
+
+pythonpath = [
+    "src"
+]
+
+python_files = [
+    "test_*.py"
+]
+
+python_classes = [
+    "Test*"
+]
+
+python_functions = [
+    "test_*"
+]
+
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    "--cov=enterprise_ai_testing_platform",
+    "--cov-report=term-missing",
+    "--cov-report=xml",
+    "--cov-report=html"
+]
+
+[tool.coverage.run]
+
+source = [
+    "enterprise_ai_testing_platform"
+]
+
+branch = true
+
+[tool.coverage.report]
+
+show_missing = true
+skip_covered = false
+precision = 2
+
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError"
+]
+
+[tool.mypy]
+
+python_version = "3.12"
+
+strict = true
+
+warn_unused_configs = true
+warn_return_any = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unreachable = true
+warn_no_return = true
+
+pretty = true
+
+show_error_codes = true
+
+namespace_packages = true
+
+explicit_package_bases = true
+
+mypy_path = "src"
+
+files = [
+    "src"
+]
