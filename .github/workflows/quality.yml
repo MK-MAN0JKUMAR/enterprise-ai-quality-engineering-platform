@@ -50,7 +50,7 @@ jobs:
         run: uv run black --check .
 
       - name: MyPy
-        run: uv run mypy src
+        run: uv run python -m mypy src
 
       - name: Pytest
         run: uv run pytest
