@@ -8,6 +8,8 @@ LLM, embedding, reranking, and future AI providers.
 from .base import Provider
 from .capabilities import ProviderCapability
 from .exceptions import ProviderError
+from .groq import GroqProvider
+from .ollama import OllamaProvider
 from .types import ProviderMetadata
 
 __all__ = [
@@ -15,4 +17,6 @@ __all__ = [
     "ProviderCapability",
     "ProviderError",
     "ProviderMetadata",
+    "GroqProvider",
+    "OllamaProvider",
 ]
