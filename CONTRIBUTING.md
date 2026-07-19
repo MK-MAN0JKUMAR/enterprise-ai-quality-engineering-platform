@@ -110,7 +110,7 @@ Before committing code, verify the local quality gate passes.
 ```bash
 uv run ruff check .
 uv run black --check .
-uv run mypy src
+uv run python -m mypy src
 uv run pytest
 ```
 
