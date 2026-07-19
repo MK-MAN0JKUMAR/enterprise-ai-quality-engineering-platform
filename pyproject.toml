@@ -43,7 +43,10 @@ classifiers = [
     "Typing :: Typed"
 ]
 
-dependencies = []
+dependencies = [
+    "pydantic>=2.11,<3.0",
+    "pydantic-settings>=2.11,<3.0",
+]
 
 [dependency-groups]
 

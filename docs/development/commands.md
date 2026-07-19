@@ -69,7 +69,7 @@ uv run black --check .
 ## Type Checking
 
 ```bash
-uv run mypy src
+uv run python -m mypy src
 ```
 
 ---
@@ -151,7 +151,7 @@ uv run pre-commit run --all-files
 # Before Every Push or Pull Request
 
 ```bash
-uv run mypy src
+uv run python -m mypy src
 uv run pytest
 ```
 
@@ -164,7 +164,7 @@ Execute before requesting a code review or merging a branch.
 ```bash
 uv run ruff check .
 uv run black --check .
-uv run mypy src
+uv run python -m mypy src
 uv run pytest
 ```
 
