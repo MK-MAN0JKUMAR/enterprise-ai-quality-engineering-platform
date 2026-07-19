@@ -11,6 +11,8 @@ throughout the platform.
 
 from __future__ import annotations
 
-__all__: list[str] = []
+from .core.metadata import VERSION
 
-__version__ = "0.1.0"
+__version__ = VERSION
+
+__all__ = ["__version__"]

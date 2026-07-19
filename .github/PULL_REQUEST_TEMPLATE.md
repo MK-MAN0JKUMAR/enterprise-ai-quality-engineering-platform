@@ -60,7 +60,7 @@ Commands executed:
 ```text
 uv run ruff check .
 uv run black --check .
-uv run mypy src
+uv run python -m mypy src
 uv run pytest
 ```
 

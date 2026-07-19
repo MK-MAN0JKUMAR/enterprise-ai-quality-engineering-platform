@@ -18,6 +18,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   quality:
 
@@ -50,7 +54,7 @@ jobs:
         run: uv run black --check .
 
       - name: MyPy
-        run: uv run mypy src
+        run: uv run python -m mypy src
 
       - name: Pytest
         run: uv run pytest
