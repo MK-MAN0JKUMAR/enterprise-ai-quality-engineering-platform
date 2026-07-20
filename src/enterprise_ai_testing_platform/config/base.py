@@ -18,4 +18,5 @@ class BaseConfig(BaseSettings):
         extra="ignore",
         frozen=True,
         validate_default=True,
+        case_sensitive=False,
     )

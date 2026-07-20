@@ -9,6 +9,7 @@ from .constants import (
 from .enums import (
     Environment,
     LogLevel,
+    ProviderType,
 )
 from .protocols import (
     SupportsName,
@@ -28,4 +29,5 @@ __all__ = [
     "JsonValue",
     "LogLevel",
     "SupportsName",
+    "ProviderType",
 ]

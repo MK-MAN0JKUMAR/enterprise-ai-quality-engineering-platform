@@ -26,3 +26,29 @@ class LogLevel(StrEnum):
     WARNING = "WARNING"
     ERROR = "ERROR"
     CRITICAL = "CRITICAL"
+
+
+class ProviderType(StrEnum):
+    """
+    Supported AI providers.
+    """
+
+    GROQ = "groq"
+
+    OLLAMA = "ollama"
+
+    OPENAI = "openai"
+
+    GEMINI = "gemini"
+
+    ANTHROPIC = "anthropic"
+
+    AZURE_OPENAI = "azure_openai"
+
+    HUGGINGFACE = "huggingface"
+
+    BEDROCK = "bedrock"
+
+    VERTEX_AI = "vertex_ai"
+
+    CUSTOM = "custom"
