@@ -1,16 +1,12 @@
 """
 Application environment definitions.
+
+This module re-exports the shared Environment enumeration
+for backward compatibility and clearer configuration imports.
 """
 
-from __future__ import annotations
+from enterprise_ai_testing_platform.common.enums import Environment
 
-from enum import StrEnum
-
-
-class Environment(StrEnum):
-    """Supported application environments."""
-
-    DEVELOPMENT = "development"
-    TESTING = "testing"
-    STAGING = "staging"
-    PRODUCTION = "production"
+__all__ = [
+    "Environment",
+]

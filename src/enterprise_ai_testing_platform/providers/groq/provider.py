@@ -4,6 +4,7 @@ Groq provider implementation.
 
 from __future__ import annotations
 
+from enterprise_ai_testing_platform.config.providers import GroqSettings
 from enterprise_ai_testing_platform.providers.base import Provider
 from enterprise_ai_testing_platform.providers.types import ProviderMetadata
 
@@ -23,7 +24,20 @@ class GroqProvider(Provider):
     AI inference capabilities will be added in future feature branches.
     """
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        settings: GroqSettings,
+    ) -> None:
+        """
+        Initialize the provider.
+
+        Args:
+            settings:
+                Groq provider configuration.
+        """
+
+        self._settings = settings
+
         self._initialized = False
 
         self._metadata = ProviderMetadata(
@@ -32,6 +46,13 @@ class GroqProvider(Provider):
             version=PROVIDER_VERSION,
             capabilities=SUPPORTED_CAPABILITIES,
         )
+
+    @property
+    def settings(self) -> GroqSettings:
+        """
+        Return provider configuration.
+        """
+        return self._settings
 
     @property
     def metadata(self) -> ProviderMetadata:
