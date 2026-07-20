@@ -28,12 +28,11 @@ ProviderSettings
 ProviderFactory
         │
         ▼
-+---------------------+
-| Runtime Providers   |
-|---------------------|
-| GroqProvider        |
-| OllamaProvider      |
-+---------------------+
+ProviderRegistry
+        │
+        ├──────────────┐
+        ▼              ▼
+GroqProvider     OllamaProvider
 ```
 
 ---
@@ -98,6 +97,24 @@ Responsibilities:
 - Isolate provider creation logic
 
 ---
+
+# ProviderRegistry
+
+ProviderRegistry maintains the mapping between supported provider
+types and their runtime implementations.
+
+Responsibilities:
+
+- Centralize provider registration
+- Create runtime providers
+- Expose registered providers
+- Keep ProviderFactory independent of individual provider implementations
+
+ProviderFactory delegates provider creation to ProviderRegistry while
+remaining the public entry point for application code.
+
+---
+
 
 # Dependency Injection
 

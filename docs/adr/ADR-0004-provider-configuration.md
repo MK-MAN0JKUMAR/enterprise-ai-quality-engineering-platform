@@ -29,18 +29,22 @@ Provider implementations should remain independent from configuration loading.
 
 ## Decision
 
-Introduce a dedicated configuration layer.
-
-Configuration hierarchy:
+Introduce a dedicated provider architecture composed of:
 
 PlatformSettings
 → ProviderSettings
 → ProviderFactory
+→ ProviderRegistry
 → Runtime Provider
 
-Providers receive configuration through constructor injection.
+Responsibilities are separated as follows:
 
-ProviderFactory owns provider creation.
+- ProviderSettings owns provider configuration.
+- ProviderFactory remains the public entry point for provider creation.
+- ProviderRegistry owns provider registration and runtime implementation lookup.
+- Runtime providers receive configuration through constructor injection.
+
+This keeps provider creation centralized while allowing new providers to be added with minimal impact to the factory.
 
 ---
 
@@ -90,7 +94,8 @@ Reasons:
 
 ## Future Work
 
-- Provider Registry
-- Dynamic Provider Discovery
-- Plugin Providers
-- Runtime Switching
+- Dynamic provider discovery
+- Plugin-based providers
+- Runtime provider switching
+- Health monitoring
+- Provider failover

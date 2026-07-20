@@ -116,6 +116,7 @@ def test_create_unsupported_provider() -> None:
 
     with pytest.raises(
         ProviderError,
+        match="Unsupported provider",
     ):
         factory.create(
             ProviderType.OPENAI,
