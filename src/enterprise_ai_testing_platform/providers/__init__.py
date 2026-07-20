@@ -11,6 +11,7 @@ from .exceptions import ProviderError
 from .factory import ProviderFactory
 from .groq import GroqProvider
 from .ollama import OllamaProvider
+from .registry import ProviderRegistry
 from .types import ProviderMetadata
 
 __all__ = [
@@ -18,6 +19,7 @@ __all__ = [
     "ProviderCapability",
     "ProviderError",
     "ProviderFactory",
+    "ProviderRegistry",
     "ProviderMetadata",
     "GroqProvider",
     "OllamaProvider",

@@ -9,8 +9,7 @@ from enterprise_ai_testing_platform.config import PlatformSettings
 
 from .base import Provider
 from .exceptions import ProviderError
-from .groq import GroqProvider
-from .ollama import OllamaProvider
+from .registry import ProviderRegistry
 
 
 class ProviderFactory:
@@ -43,15 +42,13 @@ class ProviderFactory:
                 If the provider is not supported.
         """
 
-        match provider:
-            case ProviderType.GROQ:
-                return GroqProvider(self._settings.providers.groq)
+        if not ProviderRegistry.contains(provider):
+            raise ProviderError(f"Unsupported provider: {provider}")
 
-            case ProviderType.OLLAMA:
-                return OllamaProvider(self._settings.providers.ollama)
-
-            case _:
-                raise ProviderError(f"Unsupported provider: {provider}")
+        return ProviderRegistry.create(
+            provider,
+            self._settings,
+        )
 
     def create_default_chat_provider(self) -> Provider:
         """
