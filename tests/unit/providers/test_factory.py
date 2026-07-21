@@ -7,6 +7,7 @@ import pytest
 from enterprise_ai_testing_platform.common import ProviderType
 from enterprise_ai_testing_platform.config import PlatformSettings
 from enterprise_ai_testing_platform.providers import (
+    GeminiProvider,
     GroqProvider,
     OllamaProvider,
     ProviderFactory,
@@ -17,10 +18,6 @@ from enterprise_ai_testing_platform.providers.exceptions import (
 
 
 def test_create_groq_provider() -> None:
-    """
-    ProviderFactory should create GroqProvider.
-    """
-
     factory = ProviderFactory(
         PlatformSettings(),
     )
@@ -35,11 +32,22 @@ def test_create_groq_provider() -> None:
     )
 
 
-def test_create_ollama_provider() -> None:
-    """
-    ProviderFactory should create OllamaProvider.
-    """
+def test_create_gemini_provider() -> None:
+    factory = ProviderFactory(
+        PlatformSettings(),
+    )
 
+    provider = factory.create(
+        ProviderType.GEMINI,
+    )
+
+    assert isinstance(
+        provider,
+        GeminiProvider,
+    )
+
+
+def test_create_ollama_provider() -> None:
     factory = ProviderFactory(
         PlatformSettings(),
     )
@@ -55,10 +63,6 @@ def test_create_ollama_provider() -> None:
 
 
 def test_create_default_chat_provider() -> None:
-    """
-    Factory should create the configured default chat provider.
-    """
-
     factory = ProviderFactory(
         PlatformSettings(),
     )
@@ -72,10 +76,6 @@ def test_create_default_chat_provider() -> None:
 
 
 def test_create_default_embedding_provider() -> None:
-    """
-    Factory should create the configured embedding provider.
-    """
-
     factory = ProviderFactory(
         PlatformSettings(),
     )
@@ -89,10 +89,6 @@ def test_create_default_embedding_provider() -> None:
 
 
 def test_create_default_reranking_provider() -> None:
-    """
-    Factory should create the configured reranking provider.
-    """
-
     factory = ProviderFactory(
         PlatformSettings(),
     )
@@ -106,10 +102,6 @@ def test_create_default_reranking_provider() -> None:
 
 
 def test_create_unsupported_provider() -> None:
-    """
-    Unsupported providers should raise ProviderError.
-    """
-
     factory = ProviderFactory(
         PlatformSettings(),
     )

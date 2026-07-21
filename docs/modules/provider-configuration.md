@@ -19,20 +19,19 @@ Runtime providers remain independent of configuration concerns.
 # Architecture
 
 ```
-PlatformSettings
-        │
-        ▼
-ProviderSettings
-        │
-        ▼
-ProviderFactory
-        │
-        ▼
-ProviderRegistry
-        │
-        ├──────────────┐
-        ▼              ▼
-GroqProvider     OllamaProvider
+                 PlatformSettings
+                        │
+                        ▼
+                 ProviderSettings
+                        │
+                        ▼
+                 ProviderFactory
+                        │
+                        ▼
+                 ProviderRegistry
+          ┌─────────────┼─────────────┐
+          ▼             ▼             ▼
+    GroqProvider   GeminiProvider  OllamaProvider
 ```
 
 ---
@@ -47,6 +46,7 @@ PlatformSettings
 ├── LoggingSettings
 └── ProviderSettings
     ├── GroqSettings
+    ├── GeminiSettings
     └── OllamaSettings
 ```
 
@@ -61,6 +61,9 @@ PlatformSettings
 | EATP_PROVIDER_DEFAULT_CHAT_PROVIDER | Default chat provider |
 | EATP_PROVIDER_DEFAULT_EMBEDDING_PROVIDER | Default embedding provider |
 | EATP_PROVIDER_DEFAULT_RERANKING_PROVIDER | Default reranking provider |
+| EATP_GEMINI_API_KEY |
+| EATP_GEMINI_BASE_URL |
+| EATP_GEMINI_CHAT_MODEL |
 
 ---
 
@@ -148,7 +151,7 @@ Providers never load configuration directly.
 1. Create configuration model.
 2. Add defaults.
 3. Implement runtime provider.
-4. Register in ProviderFactory.
+4. Register in ProviderRegistry.
 5. Add tests.
 6. Update documentation.
 

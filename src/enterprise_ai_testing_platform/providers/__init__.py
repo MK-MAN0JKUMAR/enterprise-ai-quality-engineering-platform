@@ -9,6 +9,7 @@ from .base import Provider
 from .capabilities import ProviderCapability
 from .exceptions import ProviderError
 from .factory import ProviderFactory
+from .gemini import GeminiProvider
 from .groq import GroqProvider
 from .ollama import OllamaProvider
 from .registry import ProviderRegistry
@@ -21,6 +22,7 @@ __all__ = [
     "ProviderFactory",
     "ProviderRegistry",
     "ProviderMetadata",
+    "GeminiProvider",
     "GroqProvider",
     "OllamaProvider",
 ]

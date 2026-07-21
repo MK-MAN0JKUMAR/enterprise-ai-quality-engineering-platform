@@ -40,6 +40,15 @@ DEFAULT_GROQ_BASE_URL: Final[BaseUrl] = "https://api.groq.com/openai/v1"
 DEFAULT_GROQ_CHAT_MODEL: Final[ModelName] = "llama-3.3-70b-versatile"
 
 #
+# Gemini defaults
+#
+
+DEFAULT_GEMINI_BASE_URL: Final[BaseUrl] = "https://generativelanguage.googleapis.com/v1beta"
+
+DEFAULT_GEMINI_CHAT_MODEL: Final[ModelName] = "gemini-2.5-flash"
+
+
+#
 # Ollama defaults
 #
 
