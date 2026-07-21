@@ -15,6 +15,7 @@ from enterprise_ai_testing_platform.common import ProviderType
 from enterprise_ai_testing_platform.config import PlatformSettings
 
 from .base import Provider
+from .gemini import GeminiProvider
 from .groq import GroqProvider
 from .ollama import OllamaProvider
 
@@ -35,6 +36,9 @@ class ProviderRegistry:
         ),
         ProviderType.OLLAMA: lambda settings: OllamaProvider(
             settings.providers.ollama,
+        ),
+        ProviderType.GEMINI: lambda settings: GeminiProvider(
+            settings.providers.gemini,
         ),
     }
 

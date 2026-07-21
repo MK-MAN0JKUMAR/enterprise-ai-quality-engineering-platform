@@ -15,6 +15,7 @@ from .defaults import (
     DEFAULT_EMBEDDING_PROVIDER,
     DEFAULT_RERANKING_PROVIDER,
 )
+from .gemini import GeminiSettings
 from .groq import GroqSettings
 from .ollama import OllamaSettings
 
@@ -49,4 +50,8 @@ class ProviderSettings(BaseConfig):
 
     ollama: OllamaSettings = Field(
         default_factory=OllamaSettings,
+    )
+
+    gemini: GeminiSettings = Field(
+        default_factory=GeminiSettings,
     )

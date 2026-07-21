@@ -19,15 +19,17 @@ The format is based on **Keep a Changelog** and this project follows **Semantic 
 - Added provider type configuration models.
 - Added support for Groq provider configuration.
 - Added support for Ollama provider configuration.
-- Added centralized provider selection through `ProviderFactory`.
+- Added support for Groq provider configuration.
+- Added centralized provider selection through `ProviderFactory` and `ProviderRegistry`.
 - Added constructor-based dependency injection for providers.
 
 #### Testing
 
 - Added comprehensive unit tests for provider configuration.
 - Added ProviderFactory unit tests.
-- Increased overall test coverage to **95.07%**.
-- Total automated tests increased to **107**.
+- Added comprehensive unit tests for Gemini provider.
+- Increased overall test coverage to **95.48%**.
+- Total automated tests increased to **119**.
 
 #### Documentation
 
