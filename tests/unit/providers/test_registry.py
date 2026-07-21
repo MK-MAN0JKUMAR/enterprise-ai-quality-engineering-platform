@@ -7,6 +7,7 @@ import pytest
 from enterprise_ai_testing_platform.common import ProviderType
 from enterprise_ai_testing_platform.config import PlatformSettings
 from enterprise_ai_testing_platform.providers import (
+    GeminiProvider,
     GroqProvider,
     OllamaProvider,
     ProviderRegistry,
@@ -19,7 +20,7 @@ def test_contains_registered_provider() -> None:
     """
 
     assert ProviderRegistry.contains(ProviderType.GROQ)
-
+    assert ProviderRegistry.contains(ProviderType.GEMINI)
     assert ProviderRegistry.contains(ProviderType.OLLAMA)
 
 
@@ -46,6 +47,22 @@ def test_create_groq_provider() -> None:
     assert isinstance(
         provider,
         GroqProvider,
+    )
+
+
+def test_create_gemini_provider() -> None:
+    """
+    Registry should create a Gemini provider.
+    """
+
+    provider = ProviderRegistry.create(
+        ProviderType.GEMINI,
+        PlatformSettings(),
+    )
+
+    assert isinstance(
+        provider,
+        GeminiProvider,
     )
 
 
@@ -85,5 +102,5 @@ def test_registered_providers() -> None:
     providers = ProviderRegistry.registered_providers()
 
     assert ProviderType.GROQ in providers
-
+    assert ProviderType.GEMINI in providers
     assert ProviderType.OLLAMA in providers
