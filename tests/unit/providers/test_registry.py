@@ -12,6 +12,7 @@ from enterprise_ai_testing_platform.providers import (
     OllamaProvider,
     ProviderRegistry,
 )
+from enterprise_ai_testing_platform.providers.lmstudio.provider import LMStudioProvider
 
 
 def test_contains_registered_provider() -> None:
@@ -104,3 +105,31 @@ def test_registered_providers() -> None:
     assert ProviderType.GROQ in providers
     assert ProviderType.GEMINI in providers
     assert ProviderType.OLLAMA in providers
+
+
+def test_registry_contains_lmstudio() -> None:
+    """
+    LM Studio should be registered.
+    """
+
+    assert ProviderRegistry.contains(
+        ProviderType.LMSTUDIO,
+    )
+
+
+def test_registry_creates_lmstudio_provider() -> None:
+    """
+    Registry should create LM Studio provider.
+    """
+
+    settings = PlatformSettings()
+
+    provider = ProviderRegistry.create(
+        ProviderType.LMSTUDIO,
+        settings,
+    )
+
+    assert isinstance(
+        provider,
+        LMStudioProvider,
+    )
