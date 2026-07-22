@@ -13,6 +13,7 @@ from enterprise_ai_testing_platform.config.providers.defaults import (
     DEFAULT_EMBEDDING_PROVIDER,
     DEFAULT_RERANKING_PROVIDER,
 )
+from enterprise_ai_testing_platform.config.providers.lmstudio import LMStudioSettings
 
 
 def test_provider_settings_defaults() -> None:
@@ -46,6 +47,11 @@ def test_provider_settings_nested_models() -> None:
         OllamaSettings,
     )
 
+    assert isinstance(
+        settings.lmstudio,
+        LMStudioSettings,
+    )
+
 
 def test_provider_settings_custom_defaults() -> None:
     """
@@ -63,3 +69,5 @@ def test_provider_settings_custom_defaults() -> None:
     assert settings.default_embedding_provider is ProviderType.GROQ
 
     assert settings.default_reranking_provider is ProviderType.GROQ
+
+    assert settings.lmstudio.provider is ProviderType.LMSTUDIO

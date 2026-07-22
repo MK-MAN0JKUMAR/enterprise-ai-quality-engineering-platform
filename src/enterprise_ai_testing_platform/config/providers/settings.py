@@ -17,6 +17,7 @@ from .defaults import (
 )
 from .gemini import GeminiSettings
 from .groq import GroqSettings
+from .lmstudio import LMStudioSettings
 from .ollama import OllamaSettings
 
 
@@ -50,6 +51,10 @@ class ProviderSettings(BaseConfig):
 
     ollama: OllamaSettings = Field(
         default_factory=OllamaSettings,
+    )
+
+    lmstudio: LMStudioSettings = Field(
+        default_factory=LMStudioSettings,
     )
 
     gemini: GeminiSettings = Field(

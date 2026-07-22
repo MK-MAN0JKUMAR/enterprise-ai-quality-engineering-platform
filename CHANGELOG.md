@@ -19,17 +19,34 @@ The format is based on **Keep a Changelog** and this project follows **Semantic 
 - Added provider type configuration models.
 - Added support for Groq provider configuration.
 - Added support for Ollama provider configuration.
-- Added support for Groq provider configuration.
+- Added support for Gemini provider configuration.
+- Added support for LM Studio provider configuration.
+- Added provider-specific configuration for local and cloud LLM providers.
+- Added centralized runtime provider selection through PlatformSettings.
 - Added centralized provider selection through `ProviderFactory` and `ProviderRegistry`.
+- Added runtime registration for Gemini provider.
+- Added runtime registration for LM Studio provider.
 - Added constructor-based dependency injection for providers.
+- Added Gemini runtime provider implementation.
+- Added LM Studio runtime provider implementation.
+- Added provider metadata support for runtime providers.
+- Added provider lifecycle implementation (initialize/shutdown).
+- Added LM Studio runtime provider implementation.
+- Added LM Studio provider constants.
+- Added LM Studio provider registration in ProviderRegistry.
+- Added LM Studio provider creation through ProviderFactory.
 
 #### Testing
 
 - Added comprehensive unit tests for provider configuration.
 - Added ProviderFactory unit tests.
+- Added ProviderRegistry unit tests.
+- Added LM Studio provider unit tests.
+- Added LM Studio configuration unit tests.
 - Added comprehensive unit tests for Gemini provider.
-- Increased overall test coverage to **95.48%**.
-- Total automated tests increased to **119**.
+- Added comprehensive unit tests for LM Studio provider.
+- Increased overall test coverage to **95.77%**.
+- Total automated tests increased to **128**.
 
 #### Documentation
 

@@ -15,6 +15,7 @@ from enterprise_ai_testing_platform.providers import (
 from enterprise_ai_testing_platform.providers.exceptions import (
     ProviderError,
 )
+from enterprise_ai_testing_platform.providers.lmstudio.provider import LMStudioProvider
 
 
 def test_create_groq_provider() -> None:
@@ -113,3 +114,22 @@ def test_create_unsupported_provider() -> None:
         factory.create(
             ProviderType.OPENAI,
         )
+
+
+def test_factory_creates_lmstudio_provider() -> None:
+    """
+    Factory should create LM Studio provider.
+    """
+
+    factory = ProviderFactory(
+        PlatformSettings(),
+    )
+
+    provider = factory.create(
+        ProviderType.LMSTUDIO,
+    )
+
+    assert isinstance(
+        provider,
+        LMStudioProvider,
+    )

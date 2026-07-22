@@ -8,6 +8,8 @@ from enterprise_ai_testing_platform.config.providers.defaults import (
     DEFAULT_EMBEDDING_PROVIDER,
     DEFAULT_GROQ_BASE_URL,
     DEFAULT_GROQ_CHAT_MODEL,
+    DEFAULT_LMSTUDIO_BASE_URL,
+    DEFAULT_LMSTUDIO_CHAT_MODEL,
     DEFAULT_OLLAMA_BASE_URL,
     DEFAULT_OLLAMA_CHAT_MODEL,
     DEFAULT_OLLAMA_EMBEDDING_MODEL,
@@ -59,3 +61,13 @@ def test_default_ollama_configuration() -> None:
     assert DEFAULT_OLLAMA_EMBEDDING_MODEL == "nomic-embed-text"
 
     assert DEFAULT_OLLAMA_RERANKING_MODEL == "bge-reranker-v2-m3"
+
+
+def test_default_lmstudio_configuration() -> None:
+    """
+    Verify LM Studio defaults.
+    """
+
+    assert DEFAULT_LMSTUDIO_BASE_URL == "http://localhost:1234/v1"
+
+    assert DEFAULT_LMSTUDIO_CHAT_MODEL == "local-model"
