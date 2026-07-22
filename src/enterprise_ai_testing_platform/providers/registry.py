@@ -17,6 +17,7 @@ from enterprise_ai_testing_platform.config import PlatformSettings
 from .base import Provider
 from .gemini import GeminiProvider
 from .groq import GroqProvider
+from .lmstudio import LMStudioProvider
 from .ollama import OllamaProvider
 
 type ProviderConstructor = Callable[
@@ -36,6 +37,9 @@ class ProviderRegistry:
         ),
         ProviderType.OLLAMA: lambda settings: OllamaProvider(
             settings.providers.ollama,
+        ),
+        ProviderType.LMSTUDIO: lambda settings: LMStudioProvider(
+            settings.providers.lmstudio,
         ),
         ProviderType.GEMINI: lambda settings: GeminiProvider(
             settings.providers.gemini,

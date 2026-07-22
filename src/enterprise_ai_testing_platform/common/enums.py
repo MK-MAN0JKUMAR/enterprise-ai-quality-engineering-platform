@@ -41,6 +41,8 @@ class ProviderType(StrEnum):
 
     GEMINI = "gemini"
 
+    LMSTUDIO = "lmstudio"
+
     ANTHROPIC = "anthropic"
 
     AZURE_OPENAI = "azure_openai"

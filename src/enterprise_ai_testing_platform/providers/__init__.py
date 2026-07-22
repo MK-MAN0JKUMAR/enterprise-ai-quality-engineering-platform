@@ -11,6 +11,7 @@ from .exceptions import ProviderError
 from .factory import ProviderFactory
 from .gemini import GeminiProvider
 from .groq import GroqProvider
+from .lmstudio import LMStudioProvider
 from .ollama import OllamaProvider
 from .registry import ProviderRegistry
 from .types import ProviderMetadata
@@ -25,4 +26,5 @@ __all__ = [
     "GeminiProvider",
     "GroqProvider",
     "OllamaProvider",
+    "LMStudioProvider",
 ]

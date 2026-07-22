@@ -29,9 +29,9 @@ Runtime providers remain independent of configuration concerns.
                         │
                         ▼
                  ProviderRegistry
-          ┌─────────────┼─────────────┐
-          ▼             ▼             ▼
-    GroqProvider   GeminiProvider  OllamaProvider
+          ┌─────────────┼─────────────────┼───────────────────┐
+          ▼             ▼                 ▼                   ▼
+    GroqProvider   GeminiProvider   LMStudioProvider    OllamaProvider
 ```
 
 ---
@@ -47,6 +47,7 @@ PlatformSettings
 └── ProviderSettings
     ├── GroqSettings
     ├── GeminiSettings
+    ├── LMStudioSettings
     └── OllamaSettings
 ```
 
@@ -88,6 +89,16 @@ PlatformSettings
 
 ---
 
+## LM Studio
+
+| Variable |
+|-----------|
+| EATP_LMSTUDIO_BASE_URL |
+| EATP_LMSTUDIO_CHAT_MODEL |
+
+---
+
+
 # ProviderFactory
 
 The ProviderFactory is responsible for constructing runtime provider instances using dependency injection.
@@ -98,6 +109,7 @@ Responsibilities:
 - Inject provider configuration
 - Select default providers
 - Isolate provider creation logic
+- Delegate provider construction to ProviderRegistry.
 
 ---
 
@@ -112,9 +124,10 @@ Responsibilities:
 - Create runtime providers
 - Expose registered providers
 - Keep ProviderFactory independent of individual provider implementations
+- Each provider type is registered exactly once to provide a single source of truth for runtime provider discovery.
 
-ProviderFactory delegates provider creation to ProviderRegistry while
-remaining the public entry point for application code.
+ProviderFactory delegates provider creation to ProviderRegistry while remaining the public entry point for application code.
+
 
 ---
 
@@ -126,7 +139,11 @@ Providers receive configuration via constructor injection.
 Example:
 
 ```python
-provider = GroqProvider(settings.providers.groq)
+provider = ProviderFactory(
+    settings,
+).create(
+    ProviderType.GROQ,
+)
 ```
 
 Providers never load configuration directly.
@@ -148,12 +165,15 @@ Providers never load configuration directly.
 
 # Adding a New Provider
 
-1. Create configuration model.
-2. Add defaults.
-3. Implement runtime provider.
-4. Register in ProviderRegistry.
-5. Add tests.
-6. Update documentation.
+1. Create the provider configuration model.
+2. Add provider default values.
+3. Implement the runtime provider.
+4. Export the provider package.
+5. Register the provider in ProviderRegistry.
+6. Verify ProviderFactory integration.
+7. Add unit tests.
+8. Update documentation.
+9. Run Ruff, Black, MyPy, Pytest, and pre-commit.
 
 ---
 

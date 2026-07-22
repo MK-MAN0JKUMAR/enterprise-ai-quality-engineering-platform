@@ -10,6 +10,7 @@ from .platform import PlatformSettings
 from .providers import (
     GeminiSettings,
     GroqSettings,
+    LMStudioSettings,
     OllamaSettings,
     ProviderSettings,
 )
@@ -24,6 +25,7 @@ __all__ = [
     "OllamaSettings",
     "PlatformSettings",
     "ProviderSettings",
+    "LMStudioSettings",
     "RuntimeSettings",
     "get_settings",
 ]
