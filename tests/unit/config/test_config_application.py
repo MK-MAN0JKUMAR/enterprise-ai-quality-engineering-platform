@@ -2,7 +2,7 @@
 Tests for application settings.
 """
 
-from enterprise_ai_testing_platform.config import ApplicationSettings
+from enterprise_ai_quality_engineering_platform.config import ApplicationSettings
 
 
 def test_application_defaults() -> None:
@@ -10,5 +10,5 @@ def test_application_defaults() -> None:
 
     application_settings = ApplicationSettings()
 
-    assert application_settings.name == "Enterprise AI Testing Platform"
+    assert application_settings.name == "Enterprise AI Quality Engineering Platform"
     assert application_settings.version == "0.1.0"

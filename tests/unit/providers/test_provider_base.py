@@ -1,4 +1,4 @@
-from enterprise_ai_testing_platform.providers import (
+from enterprise_ai_quality_engineering_platform.providers import (
     Provider,
     ProviderCapability,
     ProviderMetadata,

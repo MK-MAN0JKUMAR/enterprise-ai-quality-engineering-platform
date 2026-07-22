@@ -4,7 +4,7 @@ Tests for collection validation utilities.
 
 import pytest
 
-from enterprise_ai_testing_platform.validation.collections import (
+from enterprise_ai_quality_engineering_platform.validation.collections import (
     validate_length,
     validate_not_empty,
     validate_unique,

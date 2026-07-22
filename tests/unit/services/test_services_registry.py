@@ -4,7 +4,7 @@ Tests for the service registry.
 
 import pytest
 
-from enterprise_ai_testing_platform.services.registry import (
+from enterprise_ai_quality_engineering_platform.services.registry import (
     ServiceRegistry,
 )
 

@@ -4,7 +4,7 @@ Tests for the service container.
 
 import pytest
 
-from enterprise_ai_testing_platform.services.container import (
+from enterprise_ai_quality_engineering_platform.services.container import (
     ServiceContainer,
 )
 

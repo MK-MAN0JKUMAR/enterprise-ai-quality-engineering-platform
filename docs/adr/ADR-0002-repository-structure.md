@@ -8,7 +8,7 @@
 
 # Context
 
-The Enterprise AI Testing Platform is intended to evolve over multiple years into a production-quality engineering platform. The repository must support continuous expansion while remaining organized, maintainable, and easy to navigate.
+The Enterprise AI Quality Engineering Platform is intended to evolve over multiple years into a production-quality engineering platform. The repository must support continuous expansion while remaining organized, maintainable, and easy to navigate.
 
 Many projects begin with a simple directory structure but require significant reorganization as new features are introduced. Frequent structural changes create unnecessary refactoring, increase merge conflicts, and make documentation harder to maintain.
 
@@ -29,7 +29,7 @@ The structure is designed to support long-term growth without requiring major re
 # Repository Structure
 
 ```text
-enterprise-ai-testing-platform/
+enterprise-ai-quality-engineering-platform/
 │
 ├── .github/
 ├── app/
@@ -176,7 +176,7 @@ The project follows the modern Python src-layout.
 Production packages are placed under:
 
 src/
-└── enterprise_ai_testing_platform/
+└── enterprise_ai_quality_engineering_platform/
 
 This avoids namespace conflicts and improves packaging support.
 
@@ -211,7 +211,7 @@ Production code is organized under:
 
 ```text
 src/
-└── enterprise_ai_testing_platform/
+└── enterprise_ai_quality_engineering_platform/
 ```
 
 The package is divided into logical modules including:

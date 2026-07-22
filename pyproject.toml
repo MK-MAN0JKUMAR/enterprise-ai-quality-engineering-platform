@@ -3,7 +3,7 @@ requires = ["pdm-backend>=2.4.0"]
 build-backend = "pdm.backend"
 
 [project]
-name = "enterprise-ai-testing-platform"
+name = "enterprise-ai-quality-engineering-platform"
 version = "0.1.0"
 description = "Enterprise-grade AI testing platform for evaluating LLMs, RAG systems, AI agents, prompts, and AI applications."
 readme = "README.md"
@@ -77,8 +77,8 @@ api = []
 
 [project.urls]
 Homepage = "https://github.com/MK-MAN0JKUMAR"
-Repository = "https://github.com/MK-MAN0JKUMAR/enterprise-ai-testing-platform"
-Issues = "https://github.com/MK-MAN0JKUMAR/enterprise-ai-testing-platform/issues"
+Repository = "https://github.com/MK-MAN0JKUMAR/enterprise-ai-quality-engineering-platform"
+Issues = "https://github.com/MK-MAN0JKUMAR/enterprise-ai-quality-engineering-platform/issues"
 
 [tool.pdm]
 distribution = true
@@ -150,7 +150,7 @@ addopts = [
     "-ra",
     "--strict-markers",
     "--strict-config",
-    "--cov=enterprise_ai_testing_platform",
+    "--cov=enterprise_ai_quality_engineering_platform",
     "--cov-report=term-missing",
     "--cov-report=xml",
     "--cov-report=html"
@@ -159,7 +159,7 @@ addopts = [
 [tool.coverage.run]
 
 source = [
-    "enterprise_ai_testing_platform"
+    "enterprise_ai_quality_engineering_platform"
 ]
 
 branch = true

@@ -1,4 +1,4 @@
-# Enterprise AI Testing Platform
+# Enterprise AI Quality Engineering Platform
 
 > An enterprise-grade, modular platform for testing, evaluating, benchmarking, and validating AI systems.
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-Enterprise AI Testing Platform is a long-term engineering project focused on building a production-quality platform for AI quality engineering.
+Enterprise AI Quality Engineering Platform is a long-term engineering project focused on building a production-quality platform for AI quality engineering.
 
 The project is designed with enterprise software engineering principles from the beginning, emphasizing modular architecture, provider independence, maintainability, and extensibility.
 
@@ -106,7 +106,7 @@ Additional technologies will be introduced incrementally as the platform evolves
 ## Repository Structure
 
 ```text
-enterprise-ai-testing-platform/
+enterprise-ai-quality-engineering-platform/
 ├── .github/
 ├── app/
 ├── assets/
@@ -128,7 +128,7 @@ Clone the repository:
 
 ```bash
 git clone <repository-url>
-cd enterprise-ai-testing-platform
+cd enterprise-ai-quality-engineering-platform
 ```
 
 Install the development environment:

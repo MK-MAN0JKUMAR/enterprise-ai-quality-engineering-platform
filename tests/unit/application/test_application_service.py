@@ -2,11 +2,11 @@
 Tests for application services.
 """
 
-from enterprise_ai_testing_platform.application import (
+from enterprise_ai_quality_engineering_platform.application import (
     ApplicationContext,
     ApplicationService,
 )
-from enterprise_ai_testing_platform.services import ServiceContainer
+from enterprise_ai_quality_engineering_platform.services import ServiceContainer
 
 
 class ExampleService(ApplicationService):

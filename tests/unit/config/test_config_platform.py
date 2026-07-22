@@ -2,7 +2,7 @@
 Tests for platform settings.
 """
 
-from enterprise_ai_testing_platform.config import (
+from enterprise_ai_quality_engineering_platform.config import (
     ApplicationSettings,
     PlatformSettings,
     RuntimeSettings,

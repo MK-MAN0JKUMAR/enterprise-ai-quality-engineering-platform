@@ -1,6 +1,6 @@
 # Development Setup
 
-This guide explains how to set up a local development environment for the Enterprise AI Testing Platform.
+This guide explains how to set up a local development environment for the Enterprise AI Quality Engineering Platform.
 
 This is a one-time setup guide for new contributors.
 
@@ -25,7 +25,7 @@ Install the following software before cloning the repository.
 
 ```bash
 git clone <repository-url>
-cd enterprise-ai-testing-platform
+cd enterprise-ai-quality-engineering-platform
 ```
 
 ---
@@ -125,7 +125,7 @@ The output should display Python 3.12.x.
 The repository follows a modular architecture.
 
 ```text
-enterprise-ai-testing-platform/
+enterprise-ai-quality-engineering-platform/
 ├── app/
 ├── assets/
 ├── configs/

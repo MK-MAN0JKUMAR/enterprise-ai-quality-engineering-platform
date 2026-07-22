@@ -2,7 +2,7 @@
 Tests for shared constants.
 """
 
-from enterprise_ai_testing_platform.common.constants import (
+from enterprise_ai_quality_engineering_platform.common.constants import (
     DEFAULT_ENCODING,
     DEFAULT_TIMEOUT_SECONDS,
 )

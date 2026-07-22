@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from enterprise_ai_testing_platform.validation.paths import (
+from enterprise_ai_quality_engineering_platform.validation.paths import (
     validate_directory,
     validate_file,
     validate_path_exists,

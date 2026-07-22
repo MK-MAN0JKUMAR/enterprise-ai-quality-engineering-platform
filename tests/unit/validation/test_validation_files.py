@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from enterprise_ai_testing_platform.validation.files import (
+from enterprise_ai_quality_engineering_platform.validation.files import (
     validate_extension,
     validate_file_size,
     validate_non_empty_file,

@@ -1,5 +1,5 @@
-from enterprise_ai_testing_platform.config.providers import GroqSettings
-from enterprise_ai_testing_platform.providers.groq import GroqProvider
+from enterprise_ai_quality_engineering_platform.config.providers import GroqSettings
+from enterprise_ai_quality_engineering_platform.providers.groq import GroqProvider
 
 
 def test_groq_provider_lifecycle() -> None:
