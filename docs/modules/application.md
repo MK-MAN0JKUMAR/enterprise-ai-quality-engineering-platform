@@ -10,11 +10,13 @@ It coordinates workflows while remaining independent of provider implementations
 
 ## Responsibilities
 
-- Define the shared application context
-- Define request contracts
-- Define response contracts
-- Provide reusable application service abstractions
-- Provide reusable use case abstractions
+- Define the shared application context.
+- Define provider-independent application contracts.
+- Standardize AI request models.
+- Standardize AI response models.
+- Define reusable application service abstractions.
+- Define reusable use case abstractions.
+- Provide the canonical interface between business logic and provider runtime implementations.
 
 ---
 
@@ -31,6 +33,25 @@ application/
 
 ---
 
+## Application Contracts
+
+The `contracts` package defines the canonical request and response models used throughout the platform.
+
+These contracts are intentionally independent of any provider SDK and act as the communication boundary between the application layer and runtime providers.
+
+Current contracts include:
+
+- ChatRequest
+- ChatResponse
+- ChatMessage
+- ChatChoice
+- TokenUsage
+- ChatGenerationOptions
+
+All runtime providers are expected to translate provider-specific request and response models into these shared application contracts.
+
+---
+
 ## Dependency Rules
 
 The application layer may depend on:
@@ -39,7 +60,8 @@ The application layer may depend on:
 - config
 - exceptions
 - providers (interfaces only)
-- services (dependency injection)
+- providers (interfaces and abstractions only)
+- Provider SDKs must never be imported directly into the application layer.
 
 The application layer must not depend on:
 
@@ -69,8 +91,12 @@ The application layer must not depend on:
 ## Public API
 
 - ApplicationContext
-- ApplicationRequest
-- ApplicationResponse
+- ChatRequest
+- ChatResponse
+- ChatMessage
+- ChatChoice
+- TokenUsage
+- ChatGenerationOptions
 - ApplicationService
 - UseCase
 - ApplicationError
@@ -98,6 +124,7 @@ No changes to the public API should introduce dependencies on concrete AI provid
 
 ## Status
 
-Completed in:
+Implemented across the following feature branches:
 
-- `feature/application-services`
+- feature/application-services
+- feature/ai-model-contracts

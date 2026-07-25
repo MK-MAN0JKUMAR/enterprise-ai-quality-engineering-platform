@@ -28,14 +28,18 @@ The long-term goal is to provide a unified platform for AI quality engineering c
 
 Current milestone:
 
-* Repository foundation
-* Project architecture
-* Development environment
-* Code quality tooling
-* Continuous Integration
-* Documentation foundation
+- Repository foundation
+- Enterprise architecture
+- Development environment
+- Code quality tooling
+- Continuous Integration
+- Provider configuration system
+- Provider runtime infrastructure
+- Provider Factory and Registry
+- Multi-provider support (Groq, Ollama, Gemini, LM Studio)
+- Provider-independent application contracts
 
-Business functionality has not yet been implemented.
+Business workflows and AI runtime execution are currently under active development.
 
 ---
 
@@ -80,6 +84,23 @@ The project is built around the following principles:
 * Production-Quality Engineering
 * Long-Term Maintainability
 * Backward Compatibility whenever practical
+
+---
+
+## Current Architecture
+
+The platform currently consists of the following core layers:
+
+- Configuration Layer
+- Provider Runtime Layer
+- Provider Factory
+- Provider Registry
+- Application Layer
+- Shared Application Contracts
+- Common Utilities
+- Dependency Injection Infrastructure
+
+The application layer communicates with AI providers exclusively through provider-independent request and response contracts, ensuring that business logic remains isolated from provider-specific SDKs.
 
 ---
 
@@ -184,14 +205,18 @@ High-level implementation roadmap:
 2. Core Platform Foundation
 3. Configuration System
 4. Logging & Observability
-5. Provider Abstractions
-6. LLM Integration
-7. Prompt Evaluation
-8. Dataset Management
-9. RAG Evaluation
-10. Benchmarking
-11. AI Security
-12. Plugin Ecosystem
+5. Provider Configuration
+6. Provider Runtime
+7. Provider-independent Application Contracts
+8. Chat Runtime
+9. Provider Streaming
+10. Embedding Providers
+11. Evaluation Engine
+12. RAG Engine
+13. Benchmarking
+14. Observability
+15. Reporting
+16. Agent Runtime
 
 ---
 
