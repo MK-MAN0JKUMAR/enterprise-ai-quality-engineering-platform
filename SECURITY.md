@@ -1,6 +1,6 @@
 # Security Policy
 
-Thank you for helping improve the security of the Enterprise AI Testing Platform.
+Thank you for helping improve the security of the Enterprise AI Quality Engineering Platform.
 
 Security is a core engineering principle of this project. Responsible disclosure helps protect users, contributors, and future deployments.
 

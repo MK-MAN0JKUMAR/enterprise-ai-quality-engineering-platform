@@ -2,8 +2,8 @@
 Tests for GeminiProvider.
 """
 
-from enterprise_ai_testing_platform.config.providers import GeminiSettings
-from enterprise_ai_testing_platform.providers import (
+from enterprise_ai_quality_engineering_platform.config.providers import GeminiSettings
+from enterprise_ai_quality_engineering_platform.providers import (
     GeminiProvider,
     ProviderCapability,
 )

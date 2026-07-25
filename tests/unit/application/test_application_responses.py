@@ -2,7 +2,7 @@
 Tests for application responses.
 """
 
-from enterprise_ai_testing_platform.application import ApplicationResponse
+from enterprise_ai_quality_engineering_platform.application import ApplicationResponse
 
 
 def test_application_response_defaults() -> None:

@@ -2,7 +2,7 @@
 Tests for configuration loader.
 """
 
-from enterprise_ai_testing_platform.config import PlatformSettings, get_settings
+from enterprise_ai_quality_engineering_platform.config import PlatformSettings, get_settings
 
 
 def test_loader_returns_singleton() -> None:

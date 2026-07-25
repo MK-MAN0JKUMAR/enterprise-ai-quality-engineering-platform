@@ -1,0 +1,81 @@
+"""
+Groq provider implementation.
+"""
+
+from __future__ import annotations
+
+from enterprise_ai_quality_engineering_platform.config.providers import GroqSettings
+from enterprise_ai_quality_engineering_platform.providers.base import Provider
+from enterprise_ai_quality_engineering_platform.providers.types import ProviderMetadata
+
+from .constants import (
+    PROVIDER_NAME,
+    PROVIDER_VENDOR,
+    PROVIDER_VERSION,
+    SUPPORTED_CAPABILITIES,
+)
+
+
+class GroqProvider(Provider):
+    """
+    Groq provider implementation.
+
+    This class currently implements only the provider lifecycle.
+    AI inference capabilities will be added in future feature branches.
+    """
+
+    def __init__(
+        self,
+        settings: GroqSettings,
+    ) -> None:
+        """
+        Initialize the provider.
+
+        Args:
+            settings:
+                Groq provider configuration.
+        """
+
+        self._settings = settings
+
+        self._initialized = False
+
+        self._metadata = ProviderMetadata(
+            name=PROVIDER_NAME,
+            vendor=PROVIDER_VENDOR,
+            version=PROVIDER_VERSION,
+            capabilities=SUPPORTED_CAPABILITIES,
+        )
+
+    @property
+    def settings(self) -> GroqSettings:
+        """
+        Return provider configuration.
+        """
+        return self._settings
+
+    @property
+    def metadata(self) -> ProviderMetadata:
+        """
+        Return provider metadata.
+        """
+        return self._metadata
+
+    def initialize(self) -> None:
+        """
+        Initialize the provider.
+        """
+        self._initialized = True
+
+    def shutdown(self) -> None:
+        """
+        Shutdown the provider.
+        """
+        self._initialized = False
+
+    @property
+    def is_initialized(self) -> bool:
+        """
+        Whether the provider has been initialized.
+        """
+        return self._initialized

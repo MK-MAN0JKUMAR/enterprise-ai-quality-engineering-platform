@@ -2,18 +2,18 @@
 Tests for provider settings.
 """
 
-from enterprise_ai_testing_platform.common import ProviderType
-from enterprise_ai_testing_platform.config.providers import (
+from enterprise_ai_quality_engineering_platform.common import ProviderType
+from enterprise_ai_quality_engineering_platform.config.providers import (
     GroqSettings,
     OllamaSettings,
     ProviderSettings,
 )
-from enterprise_ai_testing_platform.config.providers.defaults import (
+from enterprise_ai_quality_engineering_platform.config.providers.defaults import (
     DEFAULT_CHAT_PROVIDER,
     DEFAULT_EMBEDDING_PROVIDER,
     DEFAULT_RERANKING_PROVIDER,
 )
-from enterprise_ai_testing_platform.config.providers.lmstudio import LMStudioSettings
+from enterprise_ai_quality_engineering_platform.config.providers.lmstudio import LMStudioSettings
 
 
 def test_provider_settings_defaults() -> None:

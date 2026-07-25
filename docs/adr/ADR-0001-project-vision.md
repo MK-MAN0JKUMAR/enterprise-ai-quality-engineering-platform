@@ -20,7 +20,7 @@ The project is intended to serve both as a production-quality engineering platfo
 
 # Decision
 
-The project will be developed as an **Enterprise AI Testing Platform**.
+The project will be developed as an **Enterprise AI Quality Engineering Platform**.
 
 The platform will prioritize architecture, maintainability, extensibility, and engineering quality over rapid feature delivery.
 
@@ -152,6 +152,6 @@ A unified platform provides better extensibility and a more consistent developer
 
 Accepted.
 
-This ADR establishes the long-term vision for the Enterprise AI Testing Platform.
+This ADR establishes the long-term vision for the Enterprise AI Quality Engineering Platform.
 
 All future architectural and implementation decisions should align with the principles and goals defined in this document.

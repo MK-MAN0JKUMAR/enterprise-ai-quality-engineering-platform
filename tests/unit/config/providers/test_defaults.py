@@ -2,8 +2,8 @@
 Tests for provider default values.
 """
 
-from enterprise_ai_testing_platform.common import ProviderType
-from enterprise_ai_testing_platform.config.providers.defaults import (
+from enterprise_ai_quality_engineering_platform.common import ProviderType
+from enterprise_ai_quality_engineering_platform.config.providers.defaults import (
     DEFAULT_CHAT_PROVIDER,
     DEFAULT_EMBEDDING_PROVIDER,
     DEFAULT_GROQ_BASE_URL,

@@ -2,7 +2,7 @@
 Tests for service lifetime definitions.
 """
 
-from enterprise_ai_testing_platform.services.lifetime import (
+from enterprise_ai_quality_engineering_platform.services.lifetime import (
     ServiceLifetime,
 )
 

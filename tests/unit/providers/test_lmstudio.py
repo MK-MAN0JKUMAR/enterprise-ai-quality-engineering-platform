@@ -2,8 +2,8 @@
 Tests for LM Studio provider configuration.
 """
 
-from enterprise_ai_testing_platform.common import ProviderType
-from enterprise_ai_testing_platform.config.providers import LMStudioSettings
+from enterprise_ai_quality_engineering_platform.common import ProviderType
+from enterprise_ai_quality_engineering_platform.config.providers import LMStudioSettings
 
 
 def test_lmstudio_settings_defaults() -> None:

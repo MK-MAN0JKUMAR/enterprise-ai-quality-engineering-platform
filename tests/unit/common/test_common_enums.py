@@ -2,7 +2,7 @@
 Tests for shared enums.
 """
 
-from enterprise_ai_testing_platform.common.enums import (
+from enterprise_ai_quality_engineering_platform.common.enums import (
     Environment,
     LogLevel,
 )

@@ -4,7 +4,7 @@ Tests for text validation utilities.
 
 import pytest
 
-from enterprise_ai_testing_platform.validation.text import (
+from enterprise_ai_quality_engineering_platform.validation.text import (
     validate_identifier,
     validate_max_length,
     validate_min_length,

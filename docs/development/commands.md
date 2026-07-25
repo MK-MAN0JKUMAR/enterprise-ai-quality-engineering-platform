@@ -1,6 +1,6 @@
 # Development Commands
 
-This document contains the standard commands used while developing the Enterprise AI Testing Platform.
+This document contains the standard commands used while developing the Enterprise AI Quality Engineering Platform.
 
 ---
 
@@ -123,7 +123,7 @@ uv run pre-commit run --all-files
 Verify the package imports successfully.
 
 ```bash
-uv run python -c "import enterprise_ai_testing_platform; print(enterprise_ai_testing_platform.__version__)"
+uv run python -c "import enterprise_ai_quality_engineering_platform; print(enterprise_ai_quality_engineering_platform.__version__)"
 ```
 
 ---

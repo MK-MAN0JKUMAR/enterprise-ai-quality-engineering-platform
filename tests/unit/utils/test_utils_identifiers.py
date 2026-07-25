@@ -4,7 +4,7 @@ Tests for identifier utilities.
 
 from uuid import UUID
 
-from enterprise_ai_testing_platform.utils import generate_uuid
+from enterprise_ai_quality_engineering_platform.utils import generate_uuid
 
 
 def test_generate_uuid_returns_valid_uuid() -> None:

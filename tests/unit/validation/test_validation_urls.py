@@ -4,7 +4,7 @@ Tests for URL validation utilities.
 
 import pytest
 
-from enterprise_ai_testing_platform.validation.urls import (
+from enterprise_ai_quality_engineering_platform.validation.urls import (
     validate_http_url,
     validate_https_url,
 )

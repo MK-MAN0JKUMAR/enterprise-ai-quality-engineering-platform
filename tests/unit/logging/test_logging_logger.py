@@ -4,8 +4,8 @@ Tests for logger factory.
 
 import logging
 
-from enterprise_ai_testing_platform.logging import get_logger
-from enterprise_ai_testing_platform.logging.constants import (
+from enterprise_ai_quality_engineering_platform.logging import get_logger
+from enterprise_ai_quality_engineering_platform.logging.constants import (
     DEFAULT_LOGGER_NAME,
 )
 

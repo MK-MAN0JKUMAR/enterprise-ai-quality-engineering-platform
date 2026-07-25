@@ -2,10 +2,10 @@
 Tests for the LM Studio provider.
 """
 
-from enterprise_ai_testing_platform.common import ProviderType
-from enterprise_ai_testing_platform.config.providers import LMStudioSettings
-from enterprise_ai_testing_platform.providers import LMStudioProvider
-from enterprise_ai_testing_platform.providers.capabilities import (
+from enterprise_ai_quality_engineering_platform.common import ProviderType
+from enterprise_ai_quality_engineering_platform.config.providers import LMStudioSettings
+from enterprise_ai_quality_engineering_platform.providers import LMStudioProvider
+from enterprise_ai_quality_engineering_platform.providers.capabilities import (
     ProviderCapability,
 )
 

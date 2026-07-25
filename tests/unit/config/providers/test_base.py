@@ -2,9 +2,9 @@
 Tests for provider base configuration.
 """
 
-from enterprise_ai_testing_platform.common import ProviderType
-from enterprise_ai_testing_platform.config.providers import ProviderConfig
-from enterprise_ai_testing_platform.config.providers.defaults import (
+from enterprise_ai_quality_engineering_platform.common import ProviderType
+from enterprise_ai_quality_engineering_platform.config.providers import ProviderConfig
+from enterprise_ai_quality_engineering_platform.config.providers.defaults import (
     DEFAULT_PROVIDER_MAX_RETRIES,
     DEFAULT_PROVIDER_TIMEOUT_SECONDS,
 )
