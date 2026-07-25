@@ -54,3 +54,33 @@ class ProviderType(StrEnum):
     VERTEX_AI = "vertex_ai"
 
     CUSTOM = "custom"
+
+
+class MessageRole(StrEnum):
+    """
+    Supported chat message roles.
+    """
+
+    SYSTEM = "system"
+
+    USER = "user"
+
+    ASSISTANT = "assistant"
+
+    TOOL = "tool"
+
+
+class FinishReason(StrEnum):
+    """
+    Reason why model generation finished.
+    """
+
+    STOP = "stop"
+
+    LENGTH = "length"
+
+    TOOL_CALLS = "tool_calls"
+
+    CONTENT_FILTER = "content_filter"
+
+    ERROR = "error"

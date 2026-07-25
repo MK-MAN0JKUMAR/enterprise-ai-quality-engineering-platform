@@ -8,7 +8,9 @@ from .constants import (
 )
 from .enums import (
     Environment,
+    FinishReason,
     LogLevel,
+    MessageRole,
     ProviderType,
 )
 from .protocols import (
@@ -30,4 +32,6 @@ __all__ = [
     "LogLevel",
     "SupportsName",
     "ProviderType",
+    "FinishReason",
+    "MessageRole",
 ]
