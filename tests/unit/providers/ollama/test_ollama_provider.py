@@ -1,5 +1,5 @@
-from enterprise_ai_testing_platform.config.providers import OllamaSettings
-from enterprise_ai_testing_platform.providers.ollama import OllamaProvider
+from enterprise_ai_quality_engineering_platform.config.providers import OllamaSettings
+from enterprise_ai_quality_engineering_platform.providers.ollama import OllamaProvider
 
 
 def test_ollama_provider_lifecycle() -> None:

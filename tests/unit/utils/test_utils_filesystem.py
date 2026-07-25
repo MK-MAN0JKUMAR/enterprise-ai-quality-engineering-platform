@@ -4,7 +4,7 @@ Tests for filesystem utilities.
 
 from pathlib import Path
 
-from enterprise_ai_testing_platform.utils import ensure_directory
+from enterprise_ai_quality_engineering_platform.utils import ensure_directory
 
 
 def test_ensure_directory_creates_directory(tmp_path: Path) -> None:

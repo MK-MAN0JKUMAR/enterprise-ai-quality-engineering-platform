@@ -2,11 +2,11 @@
 Tests for Groq provider configuration.
 """
 
-from enterprise_ai_testing_platform.common import ProviderType
-from enterprise_ai_testing_platform.config.providers import (
+from enterprise_ai_quality_engineering_platform.common import ProviderType
+from enterprise_ai_quality_engineering_platform.config.providers import (
     GroqSettings,
 )
-from enterprise_ai_testing_platform.config.providers.defaults import (
+from enterprise_ai_quality_engineering_platform.config.providers.defaults import (
     DEFAULT_GROQ_BASE_URL,
     DEFAULT_GROQ_CHAT_MODEL,
 )

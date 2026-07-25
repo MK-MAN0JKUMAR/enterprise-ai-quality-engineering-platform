@@ -2,7 +2,7 @@
 
 ## Our Pledge
 
-We, as contributors and maintainers of the Enterprise AI Testing Platform, pledge to make participation in our project and community a respectful, professional, and inclusive experience for everyone.
+We, as contributors and maintainers of the Enterprise AI Quality Engineering Platform, pledge to make participation in our project and community a respectful, professional, and inclusive experience for everyone.
 
 We are committed to fostering an environment where collaboration, learning, constructive feedback, and technical excellence are encouraged.
 

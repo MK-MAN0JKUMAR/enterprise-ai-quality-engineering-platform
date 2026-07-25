@@ -2,9 +2,9 @@
 Tests for Ollama provider configuration.
 """
 
-from enterprise_ai_testing_platform.common import ProviderType
-from enterprise_ai_testing_platform.config.providers import OllamaSettings
-from enterprise_ai_testing_platform.config.providers.defaults import (
+from enterprise_ai_quality_engineering_platform.common import ProviderType
+from enterprise_ai_quality_engineering_platform.config.providers import OllamaSettings
+from enterprise_ai_quality_engineering_platform.config.providers.defaults import (
     DEFAULT_OLLAMA_BASE_URL,
     DEFAULT_OLLAMA_CHAT_MODEL,
     DEFAULT_OLLAMA_EMBEDDING_MODEL,

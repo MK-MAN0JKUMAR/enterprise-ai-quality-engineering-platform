@@ -1,4 +1,4 @@
-from enterprise_ai_testing_platform.core.metadata import (
+from enterprise_ai_quality_engineering_platform.core.metadata import (
     PACKAGE_NAME,
     PROJECT_NAME,
     PYTHON_MIN_VERSION,
@@ -7,11 +7,11 @@ from enterprise_ai_testing_platform.core.metadata import (
 
 
 def test_project_name() -> None:
-    assert PROJECT_NAME == "Enterprise AI Testing Platform"
+    assert PROJECT_NAME == "Enterprise AI Quality Engineering Platform"
 
 
 def test_package_name() -> None:
-    assert PACKAGE_NAME == "enterprise_ai_testing_platform"
+    assert PACKAGE_NAME == "enterprise_ai_quality_engineering_platform"
 
 
 def test_version() -> None:

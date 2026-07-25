@@ -8,7 +8,7 @@
 
 # Context
 
-The Enterprise AI Testing Platform is intended to evolve over multiple years and support a wide range of AI quality engineering capabilities, including LLM testing, prompt evaluation, RAG evaluation, agent evaluation, benchmarking, observability, reporting, and plugin-based extensions.
+The Enterprise AI Quality Engineering Platform is intended to evolve over multiple years and support a wide range of AI quality engineering capabilities, including LLM testing, prompt evaluation, RAG evaluation, agent evaluation, benchmarking, observability, reporting, and plugin-based extensions.
 
 The AI ecosystem evolves rapidly. New providers, SDKs, vector databases, evaluation frameworks, and deployment platforms appear frequently. Directly coupling business logic to these technologies would make the platform difficult to maintain and expensive to evolve.
 

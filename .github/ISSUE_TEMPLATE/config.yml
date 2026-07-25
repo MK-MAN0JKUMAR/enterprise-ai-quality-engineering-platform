@@ -3,8 +3,8 @@ blank_issues_enabled: false
 contact_links:
   - name: Project Documentation
     about: Read the project documentation before opening an issue.
-    url: https://github.com/MK-MAN0JKUMAR/enterprise-ai-testing-platform/tree/main/docs
+    url: https://github.com/MK-MAN0JKUMAR/enterprise-ai-quality-engineering-platform/tree/main/docs
 
   - name: Security Policy
     about: Read the project's security policy before reporting vulnerabilities.
-    url: https://github.com/MK-MAN0JKUMAR/enterprise-ai-testing-platform/blob/main/SECURITY.md
+    url: https://github.com/MK-MAN0JKUMAR/enterprise-ai-quality-engineering-platform/blob/main/SECURITY.md

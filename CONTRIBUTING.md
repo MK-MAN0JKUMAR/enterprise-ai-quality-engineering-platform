@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to the Enterprise AI Testing Platform.
+Thank you for your interest in contributing to the Enterprise AI Quality Engineering Platform.
 
 This project is designed as a long-term, production-quality engineering platform focused on AI quality engineering, software architecture, and enterprise development practices.
 

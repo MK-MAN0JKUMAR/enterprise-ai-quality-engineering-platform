@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Enterprise AI Testing Platform supports multiple Large Language Model (LLM) providers through a configuration-driven architecture.
+The Enterprise AI Quality Engineering Platform supports multiple Large Language Model (LLM) providers through a configuration-driven architecture.
 
 The configuration layer is responsible for:
 

@@ -2,7 +2,7 @@
 Tests for hashing utilities.
 """
 
-from enterprise_ai_testing_platform.utils import md5_hash, sha256_hash
+from enterprise_ai_quality_engineering_platform.utils import md5_hash, sha256_hash
 
 
 def test_md5_hash_returns_expected_value() -> None:

@@ -2,7 +2,7 @@
 Tests for environment definitions.
 """
 
-from enterprise_ai_testing_platform.config import Environment
+from enterprise_ai_quality_engineering_platform.config import Environment
 
 
 def test_environment_values() -> None:

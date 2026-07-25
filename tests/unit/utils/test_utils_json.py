@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from enterprise_ai_testing_platform.utils import (
+from enterprise_ai_quality_engineering_platform.utils import (
     read_json_file,
     write_json_file,
 )
@@ -18,7 +18,7 @@ def test_write_and_read_json_file(tmp_path: Path) -> None:
     file_path = tmp_path / "sample.json"
 
     expected = {
-        "name": "Enterprise AI Testing Platform",
+        "name": "Enterprise AI Quality Engineering Platform",
         "version": "0.1.0",
     }
 

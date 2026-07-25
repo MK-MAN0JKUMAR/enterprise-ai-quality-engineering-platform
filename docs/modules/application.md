@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The application module provides the business orchestration layer for the Enterprise AI Testing Platform.
+The application module provides the business orchestration layer for the Enterprise AI Quality Engineering Platform.
 
 It coordinates workflows while remaining independent of provider implementations, transport layers, and user interfaces.
 

@@ -1,8 +1,8 @@
-"""Tests for the enterprise_ai_testing_platform package."""
+"""Tests for the enterprise_ai_quality_engineering_platform package."""
 
 from __future__ import annotations
 
-import enterprise_ai_testing_platform as platform
+import enterprise_ai_quality_engineering_platform as platform
 
 
 def test_package_version_exists() -> None:

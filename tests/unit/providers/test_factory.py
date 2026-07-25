@@ -4,18 +4,18 @@ Tests for ProviderFactory.
 
 import pytest
 
-from enterprise_ai_testing_platform.common import ProviderType
-from enterprise_ai_testing_platform.config import PlatformSettings
-from enterprise_ai_testing_platform.providers import (
+from enterprise_ai_quality_engineering_platform.common import ProviderType
+from enterprise_ai_quality_engineering_platform.config import PlatformSettings
+from enterprise_ai_quality_engineering_platform.providers import (
     GeminiProvider,
     GroqProvider,
     OllamaProvider,
     ProviderFactory,
 )
-from enterprise_ai_testing_platform.providers.exceptions import (
+from enterprise_ai_quality_engineering_platform.providers.exceptions import (
     ProviderError,
 )
-from enterprise_ai_testing_platform.providers.lmstudio.provider import LMStudioProvider
+from enterprise_ai_quality_engineering_platform.providers.lmstudio.provider import LMStudioProvider
 
 
 def test_create_groq_provider() -> None:

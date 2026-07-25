@@ -2,8 +2,8 @@
 Tests for application context.
 """
 
-from enterprise_ai_testing_platform.application import ApplicationContext
-from enterprise_ai_testing_platform.services import ServiceContainer
+from enterprise_ai_quality_engineering_platform.application import ApplicationContext
+from enterprise_ai_quality_engineering_platform.services import ServiceContainer
 
 
 def test_application_context_stores_service_container() -> None:

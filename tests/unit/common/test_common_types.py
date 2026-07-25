@@ -2,7 +2,7 @@
 Tests for shared type aliases.
 """
 
-from enterprise_ai_testing_platform.common.types import (
+from enterprise_ai_quality_engineering_platform.common.types import (
     JsonDict,
     JsonList,
     JsonValue,

@@ -1,4 +1,4 @@
-from enterprise_ai_testing_platform.exceptions import (
+from enterprise_ai_quality_engineering_platform.exceptions import (
     ConfigurationError,
     PlatformError,
     PlatformRuntimeError,

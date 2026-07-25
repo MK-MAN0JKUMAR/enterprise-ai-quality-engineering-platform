@@ -4,7 +4,7 @@ Tests for datetime utilities.
 
 from datetime import UTC, datetime
 
-from enterprise_ai_testing_platform.utils import (
+from enterprise_ai_quality_engineering_platform.utils import (
     current_utc_datetime,
     current_utc_timestamp,
 )

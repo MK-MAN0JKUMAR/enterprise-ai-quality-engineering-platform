@@ -2,7 +2,7 @@
 Tests for shared protocols.
 """
 
-from enterprise_ai_testing_platform.common.protocols import (
+from enterprise_ai_quality_engineering_platform.common.protocols import (
     SupportsName,
 )
 
