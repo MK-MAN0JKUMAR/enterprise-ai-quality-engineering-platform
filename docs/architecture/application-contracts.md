@@ -31,6 +31,9 @@ The Application Contract layer is designed to:
                            ▼
                 Application Contracts
       ┌─────────────────────────────────────┐
+      │ ApplicationRequest                  │
+      │ ApplicationResponse                 │
+      │                                     │
       │ ChatRequest                         │
       │ ChatResponse                        │
       │ ChatMessage                         │
@@ -94,6 +97,19 @@ Application Service
 ```
 
 The application layer never consumes provider-specific response objects.
+
+---
+
+# Generic Application Workflows
+
+Application workflows are implemented through generic use case abstractions.
+
+```text
+                UseCase<Request, Response>
+                          │
+          ┌───────────────┼────────────────┐
+          ▼               ▼                ▼
+     ChatUseCase   EmbeddingUseCase   EvaluationUseCase
 
 ---
 

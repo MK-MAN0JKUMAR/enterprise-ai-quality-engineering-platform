@@ -11,7 +11,12 @@ from enterprise_ai_quality_engineering_platform.application import (
 from enterprise_ai_quality_engineering_platform.services import ServiceContainer
 
 
-class ExampleUseCase(UseCase):
+class ExampleUseCase(
+    UseCase[
+        ApplicationRequest,
+        ApplicationResponse,
+    ]
+):
     """
     Test use case.
     """
@@ -48,6 +53,11 @@ def test_use_case_execute_returns_response() -> None:
 
     use_case = ExampleUseCase(context)
 
-    response = use_case.execute(ApplicationRequest())
+    response = use_case.execute(
+        ApplicationRequest(),
+    )
 
-    assert isinstance(response, ApplicationResponse)
+    assert isinstance(
+        response,
+        ApplicationResponse,
+    )

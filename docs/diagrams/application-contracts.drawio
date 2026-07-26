@@ -18,6 +18,9 @@
 │                     Application Contract Layer                               │
 │──────────────────────────────────────────────────────────────────────────────│
 │                                                                              │
+│ ApplicationRequest                                                           │
+│ ApplicationResponse                                                          │
+│                                                                              │
 │  ChatRequest                                                                 │
 │  ChatResponse                                                                │
 │  ChatMessage                                                                 │
