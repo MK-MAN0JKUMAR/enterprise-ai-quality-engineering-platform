@@ -16,34 +16,37 @@ The application layer communicates only through provider-independent contracts. 
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                           Application Layer                                 │
 │                                                                             │
-│  • Services                                                                  │
-│  • Use Cases                                                                 │
-│  • Application Context                                                       │
+│  • Services                                                                 │
+│  • Use Cases                                                                │
+│  • Application Context                                                      │
 └───────────────────────────────┬─────────────────────────────────────────────┘
                                 │
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                      Provider-Independent Contracts                          │
+│                      Provider-Independent Contracts                         │
 │                                                                             │
-│  • ChatRequest                                                               │
-│  • ChatResponse                                                              │
-│  • ChatMessage                                                               │
-│  • ChatChoice                                                                │
-│  • TokenUsage                                                                │
-│  • ChatGenerationOptions                                                     │
+│  • ApplicationRequest                                                       │
+│  • ApplicationResponse                                                      │
+│                                                                             │
+│  • ChatRequest                                                              │
+│  • ChatResponse                                                             │
+│  • ChatMessage                                                              │
+│  • ChatChoice                                                               │
+│  • TokenUsage                                                               │
+│  • ChatGenerationOptions                                                    │
 └───────────────────────────────┬─────────────────────────────────────────────┘
                                 │
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         Provider Runtime Layer                               │
+│                         Provider Runtime Layer                              │
 │                                                                             │
-│  • Request Mapping                                                           │
-│  • Response Mapping                                                          │
-│  • Validation                                                                │
-│  • Error Handling                                                            │
-│  • Runtime Execution                                                         │
+│  • Request Mapping                                                          │
+│  • Response Mapping                                                         │
+│  • Validation                                                               │
+│  • Error Handling                                                           │
+│  • Runtime Execution                                                        │
 └───────────────────────────────┬─────────────────────────────────────────────┘
                                 │
         ┌───────────────────────┼────────────────────────┐

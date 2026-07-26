@@ -12,8 +12,8 @@ It coordinates workflows while remaining independent of provider implementations
 
 - Define the shared application context.
 - Define provider-independent application contracts.
-- Standardize AI request models.
-- Standardize AI response models.
+- Define provider-independent application contracts.
+- Define standardized AI request and response contracts.
 - Define reusable application service abstractions.
 - Define reusable use case abstractions.
 - Provide the canonical interface between business logic and provider runtime implementations.
@@ -39,7 +39,14 @@ The `contracts` package defines the canonical request and response models used t
 
 These contracts are intentionally independent of any provider SDK and act as the communication boundary between the application layer and runtime providers.
 
-Current contracts include:
+Current contracts are organized into base application contracts and domain-specific contracts.
+
+Base Contracts
+
+- ApplicationRequest
+- ApplicationResponse
+
+Chat Contracts
 
 - ChatRequest
 - ChatResponse
@@ -91,6 +98,8 @@ The application layer must not depend on:
 ## Public API
 
 - ApplicationContext
+- ApplicationRequest
+- ApplicationResponse
 - ChatRequest
 - ChatResponse
 - ChatMessage
@@ -128,3 +137,4 @@ Implemented across the following feature branches:
 
 - feature/application-services
 - feature/ai-model-contracts
+- Generic application use case architecture
