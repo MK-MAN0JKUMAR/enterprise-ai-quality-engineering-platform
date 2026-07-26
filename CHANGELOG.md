@@ -39,6 +39,8 @@ The format is based on **Keep a Changelog** and this project follows **Semantic 
 #### Application Contracts
 
 - Added provider-independent application contract layer.
+- Added immutable `ApplicationRequest` as the canonical base request contract.
+- Added immutable `ApplicationResponse` as the canonical base response contract.
 - Added immutable `ChatRequest` model for standardized AI requests.
 - Added immutable `ChatResponse` model for standardized AI responses.
 - Added immutable `ChatMessage` model for conversation history.
@@ -46,7 +48,7 @@ The format is based on **Keep a Changelog** and this project follows **Semantic 
 - Added `TokenUsage` model for provider-neutral token accounting.
 - Added `ChatGenerationOptions` model for inference configuration.
 - Added shared AI messaging enums for message roles and finish reasons.
-- Added provider-agnostic request and response abstractions for all future runtime providers.
+- Added provider-agnostic request and response abstractions for future runtime providers.
 - Added centralized application contract exports through the application package.
 
 
@@ -63,8 +65,8 @@ The format is based on **Keep a Changelog** and this project follows **Semantic 
 - Added comprehensive unit tests for application response contracts.
 - Added validation tests for immutable dataclass behavior.
 - Added unit tests for shared AI messaging enums.
-- Increased overall test coverage to **96.06%**.
-- Total automated tests increased to **136**.
+- Added comprehensive unit tests for generic application use cases.
+- Increased total automated tests to **146**.
 
 #### Documentation
 
@@ -96,6 +98,13 @@ The format is based on **Keep a Changelog** and this project follows **Semantic 
 - Standardized AI request and response models across all providers.
 - Centralized shared AI messaging semantics.
 - Established immutable application contracts as the canonical interface between the application layer and provider runtime implementations.
+
+
+#### Application Use Cases
+
+- Refactored the `UseCase` abstraction to use Python 3.12 generic type parameters (PEP 695).
+- Improved compile-time type safety for application request and response contracts.
+- Established a reusable generic foundation for future Chat, Embedding, Evaluation, and Benchmark use cases.
 
 ---
 

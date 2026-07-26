@@ -6,19 +6,27 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 
-from enterprise_ai_quality_engineering_platform.application.context import ApplicationContext
+from enterprise_ai_quality_engineering_platform.application.context import (
+    ApplicationContext,
+)
 from enterprise_ai_quality_engineering_platform.application.contracts import (
     ApplicationRequest,
     ApplicationResponse,
 )
 
 
-class UseCase(ABC):
+class UseCase[
+    RequestT: ApplicationRequest,
+    ResponseT: ApplicationResponse,
+](ABC):
     """
     Base class for all application use cases.
     """
 
-    def __init__(self, context: ApplicationContext) -> None:
+    def __init__(
+        self,
+        context: ApplicationContext,
+    ) -> None:
         """
         Initialize the use case.
         """
@@ -36,8 +44,8 @@ class UseCase(ABC):
     @abstractmethod
     def execute(
         self,
-        request: ApplicationRequest,
-    ) -> ApplicationResponse:
+        request: RequestT,
+    ) -> ResponseT:
         """
         Execute the use case.
         """

@@ -41,7 +41,9 @@ Without standardized application contracts:
 
 Introduce a provider-independent Application Contract layer.
 
-The application layer communicates exclusively through immutable request and response models.
+The application layer communicates exclusively through immutable request and response contracts.
+
+Generic application use case abstractions consume these contracts, allowing future business workflows to remain strongly typed while preserving provider independence.
 
 Provider runtime implementations are responsible for translating between application contracts and provider-specific SDK models.
 
@@ -78,6 +80,13 @@ The Application Contract layer becomes the canonical interface between business 
 ## Implemented Contracts
 
 The following shared contracts are introduced.
+
+Base Contracts
+
+- ApplicationRequest
+- ApplicationResponse
+
+Chat Contracts
 
 - ChatRequest
 - ChatResponse
@@ -177,6 +186,7 @@ The following rules become permanent project standards.
 5. Provider-specific request models must remain inside provider implementations.
 6. Shared AI messaging semantics must use centralized enums.
 7. Future AI modules must reuse the application contracts.
+8. Application use cases should consume generic application contracts rather than concrete provider-specific models.
 
 ---
 
@@ -192,6 +202,7 @@ The following capabilities will extend this architecture.
 - Multimodal contracts
 - Agent execution contracts
 - Conversation memory contracts
+- Generic application workflows
 
 These enhancements will extend the existing contract model rather than replace it.
 

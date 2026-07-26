@@ -38,6 +38,7 @@ Current milestone:
 - Provider Factory and Registry
 - Multi-provider support (Groq, Ollama, Gemini, LM Studio)
 - Provider-independent application contracts
+- Generic application use case architecture
 
 Business workflows and AI runtime execution are currently under active development.
 
@@ -101,6 +102,8 @@ The platform currently consists of the following core layers:
 - Dependency Injection Infrastructure
 
 The application layer communicates with AI providers exclusively through provider-independent request and response contracts, ensuring that business logic remains isolated from provider-specific SDKs.
+
+Application use cases are implemented using generic contracts, allowing future Chat, Embedding, Evaluation, and Benchmark workflows to remain strongly typed while preserving provider independence.
 
 ---
 
@@ -208,7 +211,7 @@ High-level implementation roadmap:
 5. Provider Configuration
 6. Provider Runtime
 7. Provider-independent Application Contracts
-8. Chat Runtime
+8. Generic Chat Runtime
 9. Provider Streaming
 10. Embedding Providers
 11. Evaluation Engine
